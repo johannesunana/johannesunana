@@ -45,7 +45,7 @@
 
 # --- Init Defaults ---
 [init]
-    defaultbranch = main
+    defaultBranch = main
 
 # --- URL Overrides ---
 [url "git@github.com:"]
