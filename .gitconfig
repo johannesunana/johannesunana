@@ -1,0 +1,56 @@
+# --- Git LFS ---
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+
+# --- Identity ---
+[user]
+    name = Johannes Andrei Unana
+    email = you@example.com
+    signingkey = XXXXXXXXXXXXXXXX
+    timezone = Asia/Manila
+
+# --- Core ---
+[core]
+    autocrlf = input
+
+# --- Commit Signing ---
+[commit]
+    gpgsign = true
+    verbose = true
+
+[gpg]
+    program = /path/to/gpg
+
+# --- Fetch & Push ---
+[fetch]
+    prune = true
+
+[push]
+    autoSetupRemote = true
+
+# --- Merge & Diff ---
+[merge]
+    conflictstyle = zdiff3
+
+[difftool "sourcetree"]
+    cmd = "'' "
+
+[mergetool "sourcetree"]
+    cmd = "'' "
+    trustExitCode = false
+    keepBackup = false
+
+# --- Init Defaults ---
+[init]
+    defaultbranch = main
+
+# --- URL Overrides ---
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+# --- GUI ---
+[gui]
+    recentrepo = /path/to/repo
